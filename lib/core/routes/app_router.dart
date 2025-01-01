@@ -6,16 +6,18 @@ import 'package:logging/logging.dart';
 enum AppRouteName { root, login, signup, home }
 
 extension AppRouteNameExt on AppRouteName {
+  static const rootPath = '/';
+
   String get path {
     switch (this) {
       case AppRouteName.root:
-        return '/';
+        return rootPath;
       case AppRouteName.login:
-        return '/login';
+        return '$rootPath${AppRouteName.login.name}';
       case AppRouteName.signup:
-        return '/signup';
+        return '$rootPath${AppRouteName.signup.name}';
       case AppRouteName.home:
-        return '/home';
+        return '$rootPath${AppRouteName.home.name}';
     }
   }
 }

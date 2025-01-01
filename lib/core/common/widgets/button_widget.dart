@@ -56,7 +56,7 @@ class CustomButton extends StatelessWidget {
             ? onPressed
             : null,
         style: ElevatedButton.styleFrom(
-          textStyle: context.textStyles.text8P12TText.copyWith(
+          textStyle: context.textStyles.text10P12TText.copyWith(
             fontSize: _getFontSize(),
             color: Colors.white,
             fontWeight: FontWeight.w700,

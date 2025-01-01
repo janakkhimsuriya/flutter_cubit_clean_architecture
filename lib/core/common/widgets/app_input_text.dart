@@ -36,7 +36,7 @@ class InputTextWidget extends StatelessWidget {
       maxLength: 48,
       textCapitalization: textCapitalization,
       cursorHeight: 16.r,
-      style: context.textStyles.text16P20TText.copyWith(
+      style: context.textStyles.text18P20TText.copyWith(
         fontWeight: FontWeight.w500,
       ),
       onTapOutside: (event) {
@@ -46,7 +46,7 @@ class InputTextWidget extends StatelessWidget {
         filled: true,
         fillColor: cGrayLight,
         hintText: hintText,
-        hintStyle: context.textStyles.text16P20TText.copyWith(
+        hintStyle: context.textStyles.text18P20TText.copyWith(
           fontWeight: FontWeight.w500,
           color: cTextColorLight,
         ),

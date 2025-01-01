@@ -67,7 +67,7 @@ class RegisterScreen extends StatelessWidget {
                   children: [
                     Text(
                       context.strings.alreadyHaveAccount,
-                      style: context.textStyles.text14P18TText.copyWith(
+                      style: context.textStyles.text16P18TText.copyWith(
                         fontWeight: FontWeight.w700,
                       ),
                     ),
@@ -76,7 +76,7 @@ class RegisterScreen extends StatelessWidget {
                       onTap: () => context.pop(),
                       child: Text(
                         context.strings.loginHere,
-                        style: context.textStyles.text14P18TText.copyWith(
+                        style: context.textStyles.text16P18TText.copyWith(
                           fontWeight: FontWeight.w700,
                         ),
                       ),

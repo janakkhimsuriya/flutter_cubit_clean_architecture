@@ -11,7 +11,7 @@ class ContentHeaderText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       text,
-      style: context.textStyles.text24P28TText.copyWith(
+      style: context.textStyles.text26P28TText.copyWith(
         color: color ?? cTextColorDark,
         fontWeight: FontWeight.w500,
       ),

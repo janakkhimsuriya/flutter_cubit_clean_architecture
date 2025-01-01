@@ -43,7 +43,7 @@ class ContainerWithTitleWidget extends StatelessWidget {
       children: [
         Text(
           title,
-          style: context.textStyles.text14P18TText.copyWith(
+          style: context.textStyles.text16P18TText.copyWith(
             color: textColor ?? cGrayDark,
             fontWeight: FontWeight.w700,
           ),
