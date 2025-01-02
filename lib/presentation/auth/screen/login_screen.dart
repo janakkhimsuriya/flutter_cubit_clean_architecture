@@ -75,7 +75,7 @@ class LoginScreen extends StatelessWidget {
                   size: ButtonSize.large,
                   autoResize: false,
                   onPressed: () {
-                    context.push(AppRouteName.signup.path);
+                    context.push(const AppRouteName.signup().path);
                   },
                 ),
               ],
