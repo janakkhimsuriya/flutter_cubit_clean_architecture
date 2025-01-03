@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_bloc_architecture/flutter_bloc_architecture.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:go_router/go_router.dart';
 import 'package:logging/logging.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -61,7 +60,6 @@ class LoginScreen extends StatelessWidget {
                     SizedBox(height: 30.r),
                     CustomButton(
                       label: context.strings.login,
-                      size: ButtonSize.large,
                       state: state is AuthLoading
                           ? ButtonState.loading
                           : ButtonState.enable,
@@ -72,10 +70,9 @@ class LoginScreen extends StatelessWidget {
                 ),
                 CustomButton(
                   label: context.strings.signUp,
-                  size: ButtonSize.large,
                   autoResize: false,
                   onPressed: () {
-                    context.push(const AppRouteName.signup().path);
+                    const RegisterRoute().push<bool>(context);
                   },
                 ),
               ],

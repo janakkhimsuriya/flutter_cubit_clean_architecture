@@ -28,4 +28,8 @@ abstract interface class Language {
   String get logout;
 
   String get home;
+
+  String get profile;
+
+  String get settings;
 }

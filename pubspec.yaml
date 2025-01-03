@@ -42,6 +42,7 @@ dev_dependencies:
   json_serializable: ^6.9.0
   retrofit_generator: ^9.1.5
   very_good_analysis: ^6.0.0
+  go_router_builder: ^2.7.1
 
 flutter:
   uses-material-design: true

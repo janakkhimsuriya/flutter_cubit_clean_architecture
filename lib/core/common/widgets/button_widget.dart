@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc_architecture/flutter_bloc_architecture.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-
-enum ButtonSize { small, medium, large }
+enum ButtonSize { small, medium }
 
 enum ButtonState { enable, disable, loading }
 
@@ -27,22 +26,18 @@ class CustomButton extends StatelessWidget {
   double _getHeight() {
     switch (size) {
       case ButtonSize.small:
-        return 25.r;
+        return 35.r;
       case ButtonSize.medium:
-        return 30.r;
-      case ButtonSize.large:
-        return 40.r;
+        return 45.r;
     }
   }
 
   double _getFontSize() {
     switch (size) {
       case ButtonSize.small:
-        return 8.sp;
+        return 14.sp;
       case ButtonSize.medium:
-        return 10.sp;
-      case ButtonSize.large:
-        return 12.sp;
+        return 16.sp;
     }
   }
 
@@ -56,23 +51,20 @@ class CustomButton extends StatelessWidget {
             ? onPressed
             : null,
         style: ElevatedButton.styleFrom(
-          textStyle: context.textStyles.text10P12TText.copyWith(
+          textStyle: context.textStyles.text8P10TText.copyWith(
             fontSize: _getFontSize(),
             color: Colors.white,
             fontWeight: FontWeight.w700,
+            height: 1.3,
           ),
           alignment: Alignment.centerLeft,
           backgroundColor: cBrightAquamarine,
           foregroundColor: Colors.white,
           disabledBackgroundColor: cGrayDark,
           disabledForegroundColor: Colors.white,
-          padding: EdgeInsets.symmetric(
-            horizontal: size == ButtonSize.large ? 16.r : 10.r,
-          ),
+          padding: EdgeInsets.symmetric(horizontal: 16.r),
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(
-              size == ButtonSize.large ? 10.r : 8.r,
-            ),
+            borderRadius: BorderRadius.circular(8.r),
           ),
         ),
         child: Row(
@@ -84,16 +76,11 @@ class CustomButton extends StatelessWidget {
                 height: _getFontSize(),
                 width: _getFontSize(),
                 child: CircularProgressIndicator(
-                  strokeWidth: size == ButtonSize.large
-                      ? 3.r
-                      : size == ButtonSize.medium
-                          ? 2.r
-                          : 1.r,
+                  strokeWidth: size == ButtonSize.medium ? 3.r : 2.r,
                   color: Colors.white,
                 ),
               ),
-            if (state == ButtonState.loading)
-              SizedBox(width: size == ButtonSize.large ? 16.r : 10.r),
+            if (state == ButtonState.loading) SizedBox(width: 16.r),
             Text(label, textAlign: TextAlign.center),
           ],
         ),
@@ -112,12 +99,6 @@ class ButtonTemplate extends StatelessWidget {
       children: [
         Row(
           children: [
-            /*CustomButton(
-              label: context.strings.btnLogin,
-              size: ButtonSize.small,
-              onPressed: () {},
-            ),
-            const SizedBox(width: 20),*/
             Expanded(
               child: CustomButton(
                 label: context.strings.login,
@@ -145,14 +126,9 @@ class ButtonTemplate extends StatelessWidget {
             ),
           ],
         ),
-        const SizedBox(height: 20),
+        const SizedBox(height: 10),
         Row(
           children: [
-            /* CustomButton(
-              label: context.strings.btnLogin,
-              onPressed: () {},
-            ),
-            const SizedBox(width: 20),*/
             Expanded(
               child: CustomButton(
                 label: context.strings.login,
@@ -171,42 +147,6 @@ class ButtonTemplate extends StatelessWidget {
             Expanded(
               child: CustomButton(
                 label: context.strings.login,
-                state: ButtonState.loading,
-                onPressed: () {},
-              ),
-            ),
-          ],
-        ),
-        const SizedBox(height: 20),
-        Row(
-          children: [
-            /*CustomButton(
-              label: context.strings.btnLogin,
-              size: ButtonSize.large,
-              onPressed: () {},
-            ),
-            const SizedBox(width: 20),*/
-            Expanded(
-              child: CustomButton(
-                label: context.strings.login,
-                size: ButtonSize.large,
-                onPressed: () {},
-              ),
-            ),
-            const SizedBox(width: 20),
-            Expanded(
-              child: CustomButton(
-                label: context.strings.login,
-                size: ButtonSize.large,
-                state: ButtonState.disable,
-                onPressed: () {},
-              ),
-            ),
-            const SizedBox(width: 20),
-            Expanded(
-              child: CustomButton(
-                label: context.strings.login,
-                size: ButtonSize.large,
                 state: ButtonState.loading,
                 onPressed: () {},
               ),

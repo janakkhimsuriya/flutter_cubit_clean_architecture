@@ -45,4 +45,10 @@ class English implements Language {
 
   @override
   String get home => 'Home';
+
+  @override
+  String get profile => 'Profile';
+
+  @override
+  String get settings => 'Settings';
 }

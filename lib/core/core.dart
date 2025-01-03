@@ -1,4 +1,4 @@
 export 'common/common.dart';
 export 'res/res.dart';
-export 'routes/routes.dart';
+export 'router/router.dart';
 export 'utils/utils.dart';

@@ -83,5 +83,7 @@ void _diPresentations() {
     ..registerLazySingleton(LoginScreen.new)
     ..registerLazySingleton(RegisterScreen.new)
     ..registerLazySingleton(HomeCubit.new)
-    ..registerLazySingleton(HomeScreen.new);
+    ..registerLazySingleton(HomeScreen.new)
+    ..registerLazySingleton(ProfileScreen.new)
+    ..registerLazySingleton(SettingsScreen.new);
 }

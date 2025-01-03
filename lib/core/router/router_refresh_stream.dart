@@ -2,8 +2,8 @@ import 'dart:async';
 
 import 'package:flutter/widgets.dart';
 
-class GoRouterRefreshStream extends ChangeNotifier {
-  GoRouterRefreshStream(Stream<dynamic> stream) : _stream = stream {
+class RouterRefreshStream extends ChangeNotifier {
+  RouterRefreshStream(Stream<dynamic> stream) : _stream = stream {
     _subscription = _stream.listen((_) {
       notifyListeners();
     });

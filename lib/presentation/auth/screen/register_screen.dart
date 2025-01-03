@@ -57,7 +57,6 @@ class RegisterScreen extends StatelessWidget {
               children: [
                 CustomButton(
                   label: context.strings.signUp,
-                  size: ButtonSize.large,
                   autoResize: false,
                   onPressed: () {},
                 ),
