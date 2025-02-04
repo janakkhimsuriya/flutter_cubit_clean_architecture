@@ -60,26 +60,34 @@ class SettingsRoute extends GoRouteData {
       sl<SettingsScreen>();
 }
 
-@TypedStatefulShellRoute<RootShellRoute>(branches: [
-  TypedStatefulShellBranch(routes: [
-    TypedGoRoute<HomeRoute>(
-      name: RoutesNames.home,
-      path: '${RoutesNames.rootPath}${RoutesNames.home}',
+@TypedStatefulShellRoute<RootShellRoute>(
+  branches: [
+    TypedStatefulShellBranch(
+      routes: [
+        TypedGoRoute<HomeRoute>(
+          name: RoutesNames.home,
+          path: '${RoutesNames.rootPath}${RoutesNames.home}',
+        ),
+      ],
     ),
-  ]),
-  TypedStatefulShellBranch(routes: [
-    TypedGoRoute<ProfileRoute>(
-      name: RoutesNames.profile,
-      path: '${RoutesNames.rootPath}${RoutesNames.profile}',
+    TypedStatefulShellBranch(
+      routes: [
+        TypedGoRoute<ProfileRoute>(
+          name: RoutesNames.profile,
+          path: '${RoutesNames.rootPath}${RoutesNames.profile}',
+        ),
+      ],
     ),
-  ]),
-  TypedStatefulShellBranch(routes: [
-    TypedGoRoute<SettingsRoute>(
-      name: RoutesNames.settings,
-      path: '${RoutesNames.rootPath}${RoutesNames.settings}',
+    TypedStatefulShellBranch(
+      routes: [
+        TypedGoRoute<SettingsRoute>(
+          name: RoutesNames.settings,
+          path: '${RoutesNames.rootPath}${RoutesNames.settings}',
+        ),
+      ],
     ),
-  ])
-])
+  ],
+)
 class RootShellRoute extends StatefulShellRouteData {
   const RootShellRoute();
 

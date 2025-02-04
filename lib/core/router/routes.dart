@@ -9,7 +9,11 @@ class Routes {
     redirect: (context, state) {
       final authState = sl<AuthCubit>().state;
 
-      final protectedRoutes = [const HomeRoute().location];
+      final protectedRoutes = [
+        const HomeRoute().location,
+        const ProfileRoute().location,
+        const SettingsRoute().location,
+      ];
 
       if (authState is Unauthenticated) {
         if (protectedRoutes.contains(state.matchedLocation)) {
